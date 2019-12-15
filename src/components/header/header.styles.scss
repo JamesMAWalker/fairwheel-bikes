@@ -1,0 +1,22 @@
+// * Header Stylesheet * //
+
+
+.header {
+    padding: 2rem 8rem;
+    display: flex;
+    align-items: center;
+}
+
+.logo-container {
+    margin-right: auto;
+}
+
+.logo {
+    height: 10rem;
+    width: 10rem;
+}
+
+.option {
+    justify-self: flex-end;
+    margin: 0 1rem;
+}
