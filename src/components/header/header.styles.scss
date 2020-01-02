@@ -16,8 +16,18 @@
     width: 10rem;
 }
 
+.options {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .option {
     justify-self: flex-end; 
     margin: 0 1rem;
     cursor: pointer;
+}
+
+::-webkit-scrollbar {
+    display: none;
 }
