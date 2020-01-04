@@ -18,6 +18,13 @@
     overflow: scroll;
   }
 
+  .empty-message {
+    font-size: 15px;
+    margin: 50px auto;
+    text-transform: uppercase;
+    font-style: italic;
+  }
+
   button {
     margin-top: auto;
   }
