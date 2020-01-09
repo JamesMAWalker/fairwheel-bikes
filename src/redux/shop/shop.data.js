@@ -1,8 +1,8 @@
-const SHOP_DATA = [
-  {
+const SHOP_DATA = {
+  wheels: {
     id: 1,
-    title: 'Hats',
-    routeName: 'hats',
+    title: 'Wheels',
+    routeName: 'wheels',
     items: [
       {
         id: 1,
@@ -60,10 +60,10 @@ const SHOP_DATA = [
       }
     ]
   },
-  {
+  drivetrainbrakes: {
     id: 2,
-    title: 'Sneakers',
-    routeName: 'sneakers',
+    title: 'Drivetrain//Brakes',
+    routeName: 'drivetrainbrakes',
     items: [
       {
         id: 10,
@@ -115,10 +115,10 @@ const SHOP_DATA = [
       }
     ]
   },
-  {
+  cockpitsaddles: {
     id: 3,
-    title: 'Jackets',
-    routeName: 'jackets',
+    title: 'Cockpit//Saddles',
+    routeName: 'cockpitsaddles',
     items: [
       {
         id: 18,
@@ -152,10 +152,10 @@ const SHOP_DATA = [
       }
     ]
   },
-  {
+  framesforks: {
     id: 4,
-    title: 'Womens',
-    routeName: 'womens',
+    title: 'Frames//Forks',
+    routeName: 'framesforks',
     items: [
       {
         id: 23,
@@ -201,10 +201,10 @@ const SHOP_DATA = [
       }
     ]
   },
-  {
+  accessories: {
     id: 5,
-    title: 'Mens',
-    routeName: 'mens',
+    title: 'Accessories',
+    routeName: 'accessories',
     items: [
       {
         id: 30,
@@ -244,6 +244,6 @@ const SHOP_DATA = [
       }
     ]
   }
-];
+};
 
 export default SHOP_DATA;

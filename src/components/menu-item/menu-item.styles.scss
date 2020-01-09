@@ -43,7 +43,9 @@
   }
 
   .content {
+    position: relative;
     height: 90px;
+    max-width: 90%;
     padding: 0 25px;
     display: flex;
     flex-direction: column;
@@ -58,7 +60,7 @@
     .title {
       font-weight: bold;
       margin-bottom: 6px;
-      font-size: 22px;
+      font-size: 1.75vmin;
       color: #4a4a4a;
     }
 
