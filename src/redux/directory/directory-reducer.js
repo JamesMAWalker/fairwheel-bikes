@@ -2,7 +2,7 @@ const INITIAL_STATE = {
   sections: [
     {
       title: "wheels",
-      imageUrl: "https://bit.ly/2Ynkc2x",
+      imageUrl: "https://bit.ly/2RdbctG",
       id: 1,
       linkUrl: "shop/wheels"
     },

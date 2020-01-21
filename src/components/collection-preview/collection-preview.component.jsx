@@ -1,6 +1,8 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
 import CollectionItem from '../collection-item/collection-item.component';
+import { selectCollection } from '../../redux/shop/shop.selectors';
 
 import './collection-preview.styles.scss';
 
@@ -13,11 +15,13 @@ const CollectionPreview = ({ title, items }) => (
                 items
                 .filter((item, index) => index < 4)
                 .map((item) => (
-                    <CollectionItem key={item.id} item={item} />
+                    <CollectionItem key={item.id} item={item}/>
                 ))
             }
         </div>
     </div>
 );
+
+
 
 export default CollectionPreview;

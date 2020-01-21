@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 
@@ -9,31 +9,30 @@ import CartDropDown from '../cart-dropdown/cart-dropdown.component';
 import { selectCartHidden } from '../../redux/cart/cart.selectors';
 import { selectCurrentUser } from '../../redux/user/user.selectors';
 
-
-import { ReactComponent as Logo } from '../../assets/FWBlogo.svg';
+import { ReactComponent as Logo } from '../../assets/Logo__Abs-Horizontal.svg';
 import "./header.styles.scss";
 
 
 const Header = ({ currentUser, hidden }) => (
   <nav className="header">
-    <Link to="/" className="logo-container">
+    <NavLink to="/" className="logo-container">
       <Logo className="logo"></Logo>
-    </Link>
+    </NavLink>
     <div className="options">
-      <Link to="/shop" className="option">
+      <NavLink to="/shop" className="option">
         SHOP
-      </Link>
-      <Link to="/" className="option">
+      </NavLink>
+      <NavLink to="/" className="option">
         CONTACT
-      </Link>
+      </NavLink>
       {currentUser ? (
         <div className="option" onClick={() => auth.signOut()}>
           SIGN OUT
         </div>
       ) : (
-        <Link className="option" to="/signin">
+        <NavLink className="option" to="/signin">
           SIGN IN
-        </Link>
+        </NavLink>
       )}
       <CartIcon />
     </div>
