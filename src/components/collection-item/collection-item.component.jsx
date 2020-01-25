@@ -4,32 +4,37 @@ import { Link } from 'react-router-dom';
 
 import CustomButton from '../custom-button/custom-button.component';
 import { addItem } from '../../redux/cart/cart.actions';
-import { selectCollection } from "../../redux/shop/shop.selectors";
 
-import "./collection-item.styles.scss";
+
+// import "./collection-item.styles.scss";
+import {
+  CollectionItemContainer,
+  ItemImage,
+  CollectionFooter,
+  Name,
+  Price
+} from './collection-item.styles.jsx';
 
 const CollectionItem = ({ item, addItem, collection }) => {
     const { name, price, imageUrl, id } = item;
-    // console.log(collection);
-    
     
     return (
-      <div className="collection-item">
-        <Link
+      <CollectionItemContainer className="collection-item">
+        <ItemImage
           to={`/shop/${collection.routeName}/${id}`}
           className="image"
           style={{
             backgroundImage: `url(${imageUrl})`
           }}
         />
-        <div className="collection-footer">
-          <span className="name">{name}</span>
-          <span className="price">{price}</span>
-        </div>
-        <CustomButton onClick={() => addItem(item)} invereted>
+        <CollectionFooter className="collection-footer">
+          <Name className="name">{name}</Name>
+          <Price className="price">{price}</Price>
+        </CollectionFooter>
+        <CustomButton onClick={() => addItem(item)} inverted>
           ADD TO CART
         </CustomButton>
-      </div>
+      </CollectionItemContainer>
     );
 };
 
@@ -38,10 +43,6 @@ const CollectionItem = ({ item, addItem, collection }) => {
 const mapDispatchToProps = dispatch => ({
     addItem: item => dispatch(addItem(item)), 
 });
-
-// const mapStateToProps = state => ({
-//   collection: selectCollection
-// });
 
 
 export default connect(null, mapDispatchToProps)(CollectionItem);

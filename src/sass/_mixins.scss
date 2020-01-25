@@ -1,0 +1,105 @@
+/*--------------------------------*/
+/* Mixins */
+/*--------------------------------*/
+
+
+// Visualization Tools //
+
+@mixin contrastEl {
+    background-color: var(--test);
+    border: 1px solid var(--test-border);
+}
+
+@mixin contrastEl2 {
+    background-color: var(--test-2);
+    border: 1px solid var(--test-border-2);
+}
+
+@mixin contrastEl3 {
+    background-color: var(--test-3);
+    border: 1px solid var(--test-border-3);
+}
+
+
+// BG Image //
+
+@mixin bgimggrad($clr1, $clr2, $img) {
+    background-image: linear-gradient(
+    to bottom,
+        $clr1,
+        $clr2),
+    url($img);
+    background-position: center;
+    background-size: cover;
+}
+
+@mixin bggrad($clr1, $clr2) {
+    background-image: linear-gradient(
+    to bottom,
+        $clr1,
+        $clr2
+    );
+    background-position: center;
+    background-size: cover;
+}
+
+@mixin bgimg($img) {
+    background-image: url($img);
+    background-position: center;
+    background-size: cover;
+}
+
+@mixin bgimgicon($img) {
+    background-image: url($img);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+
+
+//  Flex Tools //
+
+@mixin flexFramer {
+    width: 97%;
+    height: 95%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media only screen and (max-width: $bp-sm) {
+        width: 95%;
+        height: 96%;
+    }
+}
+
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flexCenterCol {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+@mixin maxHW {
+    height: 100%;
+    width: 100%;
+}
+
+// Pseudo Elements //
+
+@mixin smallLine($content, $color, $width) {
+    content: $content;
+    position: absolute;
+    left: 0;
+    bottom: -25%;
+    height: 2px;
+    width: $width;
+    background-color: $color;
+}

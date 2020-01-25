@@ -36,7 +36,7 @@ const SHOP_DATA = {
         id: 5,
         name: "Mavic Allroad Pro",
         brand: "mavic",
-        imageUrl: "https://bit.ly/36S1kMQ",
+        imageUrl: "https://bit.ly/2R7jy6d",
         price: 1199
       },
       {

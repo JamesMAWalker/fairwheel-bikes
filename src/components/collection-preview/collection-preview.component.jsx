@@ -1,16 +1,19 @@
 import React from 'react';
-import { connect } from 'react-redux';
 
 import CollectionItem from '../collection-item/collection-item.component';
-import { selectCollection } from '../../redux/shop/shop.selectors';
 
-import './collection-preview.styles.scss';
+// import './collection-preview.styles.scss';
+import {
+    CollectionPreviewContainer,
+    Title,
+    Preview
+} from './collection-preview.styles.jsx';
 
 
 const CollectionPreview = ({ title, items }) => (
-    <div className="collection-preview">
-        <h2 className="title">{title.toUpperCase()}</h2>
-        <div className="preview">
+    <CollectionPreviewContainer className="collection-preview">
+        <Title className="title">{title.toUpperCase()}</Title>
+        <Preview className="preview">
             {
                 items
                 .filter((item, index) => index < 4)
@@ -18,8 +21,8 @@ const CollectionPreview = ({ title, items }) => (
                     <CollectionItem key={item.id} item={item}/>
                 ))
             }
-        </div>
-    </div>
+        </Preview>
+    </CollectionPreviewContainer>
 );
 
 
