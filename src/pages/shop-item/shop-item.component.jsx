@@ -32,7 +32,7 @@ const ItemPage = ({ item, collection }) => {
         </div>
       </div>
       // <div className="shop-item">
-      //   <div className="photo"></div>z
+      //   <div className="photo"></div>
       //   <div className="title">{title}</div>
       //   <div className="title">{description}</div>
       //   <div className="title">{weight}</div>
